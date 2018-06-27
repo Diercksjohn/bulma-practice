@@ -1,0 +1,15 @@
+{
+  "name": "learn-bulma",
+  "version": "1.0.0",
+  "description": "used to learn bulma",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "John Diercks",
+  "license": "ISC",
+  "dependencies": {
+    "bulma": "^0.7.1",
+    "font-awesome": "^4.7.0"
+  }
+}

@@ -1,0 +1,40 @@
+@import 'vendors/bulma/bulma.sass';
+
+$navbar-height: 100%;
+$navbar-background-color: #303A52;
+$navbar-item-color: white;
+$navbar-burger-color: white;
+$navbar-divider-background-color: white;
+
+#navbar{
+    background-color: $navbar-background-color;
+    color: $navbar-divider-background-color;
+
+    #navMenu{
+        height: $navbar-height;
+        width: 100%;
+        position: fixed;
+        background-color: $navbar-background-color;
+
+        .navbar-item{
+            color: $navbar-item-color;
+            text-align: center;
+            font-size: 2rem;
+            //make media query for bigger screens for margin-top
+            margin-top: 4rem;
+        }
+    }
+    
+    .navbar-burger-custom{
+        span{
+            color: $navbar-burger-color;
+        }
+    }
+    
+    .navbar-burger-custom:active{
+        span{
+            color: $navbar-burger-color;
+        }
+    }
+}
+
