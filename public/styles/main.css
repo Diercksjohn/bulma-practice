@@ -6341,22 +6341,94 @@ label.panel-block {
   background-color: #fafafa;
   padding: 3rem 1.5rem 6rem; }
 
+body {
+  background-color: white;
+  height: 300vh; }
+
 #navbar {
   background-color: #303A52;
-  color: white; }
+  color: white;
+  background-color: #303A52;
+  position: fixed;
+  top: 0;
+  width: 100%; }
   #navbar #navMenu {
     height: 100%;
     width: 100%;
     position: fixed;
     background-color: #303A52; }
+    @media only screen and (min-width: 1024px) {
+      #navbar #navMenu {
+        height: 5%; } }
     #navbar #navMenu .navbar-item {
       color: white;
       text-align: center;
-      font-size: 2rem;
+      font-size: 2.2rem;
+      background-color: #303A52;
       margin-top: 4rem; }
+      @media only screen and (min-width: 375px) {
+        #navbar #navMenu .navbar-item {
+          font-size: 2.4rem;
+          margin-top: 3.5rem; } }
+      @media screen and (min-width: 769px), print {
+        #navbar #navMenu .navbar-item {
+          font-size: 2.8rem; } }
   #navbar .navbar-burger-custom span {
     color: white; }
   #navbar .navbar-burger-custom:active span {
     color: white; }
+
+.collapse {
+  -webkit-animation: collapse 0.5s ease forwards;
+  -o-animation: collapse 0.5s ease forwards;
+  animation: collapse 0.5s ease forwards; }
+
+.open {
+  -webkit-animation: open 0.5s ease forwards;
+  -o-animation: open 0.5s ease forwards;
+  animation: open 0.5s ease forwards; }
+
+@-webkit-keyframes collapse {
+  from {
+    opacity: 1;
+    top: 0; }
+  to {
+    opacity: 0;
+    top: -73px; } }
+@-o-keyframes collapse {
+  from {
+    opacity: 1;
+    top: 0; }
+  to {
+    opacity: 0;
+    top: -73px; } }
+@keyframes collapse {
+  from {
+    opacity: 1;
+    top: 0; }
+  to {
+    opacity: 0;
+    top: -73px; } }
+@-webkit-keyframes open {
+  from {
+    opacity: 0;
+    top: -73px; }
+  to {
+    opacity: 1;
+    top: 0; } }
+@-o-keyframes open {
+  from {
+    opacity: 0;
+    top: -73px; }
+  to {
+    opacity: 1;
+    top: 0; } }
+@keyframes open {
+  from {
+    opacity: 0;
+    top: -73px; }
+  to {
+    opacity: 1;
+    top: 0; } }
 
 /*# sourceMappingURL=main.css.map */

@@ -1,41 +1,58 @@
-@mixin phoneSmall {
-    @media only screen and (max-width: 320px){
-       @content; 
-    }
-}
+//media queries
+
 
 @mixin phoneMedium {
-    @media only screen and (max-width: 375px){
+    @media only screen and (min-width: 375px){
        @content; 
     }
 }
 
 @mixin phoneLarge {
-    @media only screen and (max-width: 425px){
+    @media only screen and (min-width: 425px){
+       @content; 
+    }
+}
+
+@mixin tablet {
+    @media only screen and (min-width: 768px){
        @content; 
     }
 }
 
 @mixin laptop {
-    @media only screen and (max-width: 768px){
-       @content; 
-    }
-}
-
-@mixin laptopMedium {
-    @media only screen and (max-width: 1024px){
+    @media only screen and (min-width: 1024px){
        @content; 
     }
 }
 
 @mixin laptopLarge {
-    @media only screen and (max-width: 1440px){
+    @media only screen and (min-width: 1440px){
        @content; 
     }
 }
 
 @mixin fourK {
-    @media only screen and (max-width: 2560px){
+    @media only screen and (min-width: 2560px){
        @content; 
+    }
+}
+
+//Animation, transition and transformation
+
+@mixin animation($forwards){
+    -webkit-animation: $forwards;
+    -o-animation: $forwards;
+    animation: $forwards;
+}
+
+@mixin keyframes($animation-name) {
+    @-webkit-keyframes #{$animation-name} {
+        @content;
+    }
+    @-o-keyframes #{$animation-name} {
+        @content;
+    }  
+    @keyframes #{$animation-name} {
+        @content;
     }
 }

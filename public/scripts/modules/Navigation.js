@@ -2,7 +2,7 @@
     var scrollState = 0;
     
     // Store navbar classes
-    var navClasses = document.getElementById('navBar').classList;
+    var navClasses = document.getElementById('navbar').classList;
     
     // returns current scroll position
     var scrollTop = function() {

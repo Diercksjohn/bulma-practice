@@ -1,12 +1,15 @@
+@import '_mixins';
 @import 'vendors/bulma/bulma.sass';
 @import '_global';
-@import '_mixins';
+
 
 $navbar-height: 100%;
 $navbar-background-color: #303A52;
 $navbar-item-color: white;
 $navbar-burger-color: white;
 $navbar-divider-background-color: white;
+
+//media query for laptop needs to make the original nav show and hamburger nav disappear
 
 
 
@@ -24,12 +27,27 @@ $navbar-divider-background-color: white;
         position: fixed;
         background-color: $navbar-background-color;
 
+        @include laptop {
+            height: 5%;
+        }
+
         .navbar-item{
             color: $navbar-item-color;
             text-align: center;
-            font-size: 2rem;
+            font-size: 2.2rem;
+            background-color: $navbar-background-color;
             //make media query for bigger screens for margin-top
             margin-top: 4rem;
+
+            @include phoneMedium{
+                font-size: 2.4rem;
+                margin-top: 3.5rem;
+            }
+            
+
+            @include tablet{
+                font-size: 2.8rem;
+            }
         }
     }
     
@@ -47,53 +65,32 @@ $navbar-divider-background-color: white;
 }
 
 .collapse {
-    -webkit-animation: collapse .5s ease forwards;
-            animation: collapse .5s ease forwards;
+    @include animation(collapse .5s ease forwards);
+
   }
   
   .open {
-    -webkit-animation: open .5s ease forwards;
-            animation: open .5s ease forwards;
+    @include animation(open .5s ease forwards);
   }
-  
-  @-webkit-keyframes collapse {
+
+  @include keyframes (collapse){
     from {
-      opacity: 1;
-      top: 0;
+        opacity: 1;
+        top: 0;
     }
     to {
-      opacity: 0;
-      top: -73px;
+    opacity: 0;
+    top: -73px;
     }
   }
-  
-  @keyframes collapse {
+
+  @include keyframes (open){
     from {
-      opacity: 1;
-      top: 0;
-    }
+        opacity: 0;
+        top: -73px;
+      }
     to {
-      opacity: 0;
-      top: -73px;
-    }
-  }
-  @-webkit-keyframes open {
-    from {
-      opacity: 0;
-      top: -73px;
-    }
-    to {
-      opacity: 1;
-      top: 0;
-    }
-  }
-  @keyframes open {
-    from {
-      opacity: 0;
-      top: -73px;
-    }
-    to {
-      opacity: 1;
-      top: 0;
+    opacity: 1;
+    top: 0;
     }
   }
