@@ -1,4 +1,6 @@
 @import 'vendors/bulma/bulma.sass';
+@import '_global';
+@import '_mixins';
 
 $navbar-height: 100%;
 $navbar-background-color: #303A52;
@@ -6,9 +8,15 @@ $navbar-item-color: white;
 $navbar-burger-color: white;
 $navbar-divider-background-color: white;
 
+
+
 #navbar{
     background-color: $navbar-background-color;
     color: $navbar-divider-background-color;
+    background-color: $navbar-background-color;
+    position: fixed;
+    top: 0;
+    width: 100%;
 
     #navMenu{
         height: $navbar-height;
@@ -38,3 +46,54 @@ $navbar-divider-background-color: white;
     }
 }
 
+.collapse {
+    -webkit-animation: collapse .5s ease forwards;
+            animation: collapse .5s ease forwards;
+  }
+  
+  .open {
+    -webkit-animation: open .5s ease forwards;
+            animation: open .5s ease forwards;
+  }
+  
+  @-webkit-keyframes collapse {
+    from {
+      opacity: 1;
+      top: 0;
+    }
+    to {
+      opacity: 0;
+      top: -73px;
+    }
+  }
+  
+  @keyframes collapse {
+    from {
+      opacity: 1;
+      top: 0;
+    }
+    to {
+      opacity: 0;
+      top: -73px;
+    }
+  }
+  @-webkit-keyframes open {
+    from {
+      opacity: 0;
+      top: -73px;
+    }
+    to {
+      opacity: 1;
+      top: 0;
+    }
+  }
+  @keyframes open {
+    from {
+      opacity: 0;
+      top: -73px;
+    }
+    to {
+      opacity: 1;
+      top: 0;
+    }
+  }

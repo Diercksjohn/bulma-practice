@@ -1,0 +1,41 @@
+@mixin phoneSmall {
+    @media only screen and (max-width: 320px){
+       @content; 
+    }
+}
+
+@mixin phoneMedium {
+    @media only screen and (max-width: 375px){
+       @content; 
+    }
+}
+
+@mixin phoneLarge {
+    @media only screen and (max-width: 425px){
+       @content; 
+    }
+}
+
+@mixin laptop {
+    @media only screen and (max-width: 768px){
+       @content; 
+    }
+}
+
+@mixin laptopMedium {
+    @media only screen and (max-width: 1024px){
+       @content; 
+    }
+}
+
+@mixin laptopLarge {
+    @media only screen and (max-width: 1440px){
+       @content; 
+    }
+}
+
+@mixin fourK {
+    @media only screen and (max-width: 2560px){
+       @content; 
+    }
+}
