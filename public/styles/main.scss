@@ -21,6 +21,15 @@ $navbar-divider-background-color: white;
     top: 0;
     width: 100%;
 
+    .navbar-burger-custom{
+        
+        // @include laptopMedium {
+            
+        //     display: none;
+        // }
+
+    }
+
     #navMenu{
         height: $navbar-height;
         width: 100%;
@@ -30,11 +39,6 @@ $navbar-divider-background-color: white;
         @include laptop {
             height: 2rem;
             padding: 0 0 3rem 0;
-        }
-
-        @include laptopLarge {
-            
-            
         }
 
         .navbar-item{
@@ -52,7 +56,7 @@ $navbar-divider-background-color: white;
             
 
             @include tablet{
-                font-size: 2rem;
+                font-size: 2.3rem;
             }
 
             @include laptop{
@@ -61,9 +65,6 @@ $navbar-divider-background-color: white;
                 margin: 1rem 3rem 0 0;
             }
 
-            @include laptopMedium{
-                font-size: 1rem;
-            }
         }
     }
     
