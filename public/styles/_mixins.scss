@@ -45,6 +45,12 @@
     animation: $forwards;
 }
 
+@mixin transition($property){
+    -webkit-transition: $property;
+    -o-transition: $property;
+    transition: $property;
+}
+
 @mixin keyframes($animation-name) {
     @-webkit-keyframes #{$animation-name} {
         @content;
