@@ -25,6 +25,12 @@
     }
 }
 
+@mixin laptopMedium {
+    @media only screen and (min-width: 1024px) and (max-width: 1088px){
+       @content; 
+    }
+}
+
 @mixin laptopLarge {
     @media only screen and (min-width: 1440px){
        @content; 

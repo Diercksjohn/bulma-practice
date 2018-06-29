@@ -28,7 +28,13 @@ $navbar-divider-background-color: white;
         background-color: $navbar-background-color;
 
         @include laptop {
-            height: 5%;
+            height: 2rem;
+            padding: 0 0 3rem 0;
+        }
+
+        @include laptopLarge {
+            
+            
         }
 
         .navbar-item{
@@ -46,7 +52,17 @@ $navbar-divider-background-color: white;
             
 
             @include tablet{
-                font-size: 2.8rem;
+                font-size: 2rem;
+            }
+
+            @include laptop{
+                margin-top: 1rem;
+                font-size: 1rem;
+                margin: 1rem 3rem 0 0;
+            }
+
+            @include laptopMedium{
+                font-size: 1rem;
             }
         }
     }

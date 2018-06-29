@@ -6359,7 +6359,8 @@ body {
     background-color: #303A52; }
     @media only screen and (min-width: 1024px) {
       #navbar #navMenu {
-        height: 5%; } }
+        height: 2rem;
+        padding: 0 0 3rem 0; } }
     #navbar #navMenu .navbar-item {
       color: white;
       text-align: center;
@@ -6372,7 +6373,15 @@ body {
           margin-top: 3.5rem; } }
       @media screen and (min-width: 769px), print {
         #navbar #navMenu .navbar-item {
-          font-size: 2.8rem; } }
+          font-size: 2rem; } }
+      @media only screen and (min-width: 1024px) {
+        #navbar #navMenu .navbar-item {
+          margin-top: 1rem;
+          font-size: 1rem;
+          margin: 1rem 3rem 0 0; } }
+      @media only screen and (min-width: 1024px) and (max-width: 1088px) {
+        #navbar #navMenu .navbar-item {
+          font-size: 1rem; } }
   #navbar .navbar-burger-custom span {
     color: white; }
   #navbar .navbar-burger-custom:active span {
